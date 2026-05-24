@@ -43,8 +43,8 @@ setup(
     package_data={'jraph': ['ogb_examples/test_data/*']},
     python_requires='>=3.6',
     install_requires=[
-        'jax>=0.1.55',
-        'jaxlib>=0.1.37',
+        'jax>=0.4.30',
+        'jaxlib>=0.4.30',
         'numpy>=1.18.0',
     ],
     extras_require={'examples': ['dm-haiku>=0.0.2', 'absl-py>=0.9',
