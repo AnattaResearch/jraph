@@ -41,6 +41,12 @@ from jraph._src.models import InteractionUpdateEdgeFn
 from jraph._src.models import InteractionUpdateNodeFn
 from jraph._src.models import NodeFeatures
 from jraph._src.models import RelationNetwork
+from jraph._src.typed_graph import Context
+from jraph._src.typed_graph import EdgeSet
+from jraph._src.typed_graph import EdgeSetKey
+from jraph._src.typed_graph import EdgesIndices
+from jraph._src.typed_graph import NodeSet
+from jraph._src.typed_graph import TypedGraph
 from jraph._src.utils import ArrayTree
 from jraph._src.utils import batch
 from jraph._src.utils import batch_np
@@ -77,6 +83,8 @@ __version__ = "0.0.6.dev0"
 __all__ = ("ArrayTree", "DeepSets", "GraphConvolution", "GraphMapFeatures",
            "InteractionNetwork", "RelationNetwork", "GraphNetGAT", "GAT",
            "GraphsTuple", "GraphNetwork", "NodeFeatures",
+           "Context", "EdgeSet", "EdgeSetKey", "EdgesIndices", "NodeSet",
+           "TypedGraph",
            "AggregateEdgesToNodesFn", "AggregateNodesToGlobalsFn",
            "AggregateEdgesToGlobalsFn", "AttentionLogitFn", "AttentionReduceFn",
            "GNUpdateEdgeFn", "GNUpdateNodeFn", "GNUpdateGlobalFn",
