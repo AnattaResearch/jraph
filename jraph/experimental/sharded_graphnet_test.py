@@ -19,7 +19,7 @@ import os
 from absl.testing import absltest
 from absl.testing import parameterized
 import jax
-from jax.lib import xla_bridge
+from jax.extend import backend
 import jax.tree_util as tree
 import jraph
 from jraph._src import utils
@@ -78,7 +78,7 @@ class ShardedGraphnetTest(parameterized.TestCase):
     super().setUp()
     os.environ[
         'XLA_FLAGS'] = '--xla_force_host_platform_device_count=3'
-    xla_bridge.get_backend.cache_clear()
+    backend.get_backend.cache_clear()
 
   @parameterized.named_parameters(
       ('split_3_to_4', [3, 5, 4], [[3, 3], [2, 4]], [[0, 1], [1, 2]]),
